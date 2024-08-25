@@ -23,10 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_email'] = $user['email'];
             $_SESSION['role'] = $user['role'] == 0 ? 'user' : 'admin';
             if($user['role'] == 0){
-                header('Location:  http://localhost/xampp/backend_project/index/index.php');
+                header('Location:  http://localhost/xampp/backend-project/index/index.php');
             }
             else{
-                header('Location:  http://localhost/xampp/backend_project/admin/dashboard/dashboard.php');
+                header('Location:  http://localhost/xampp/backend-project/admin/dashboard/dashboard.php');
             }
             exit();
         } else {

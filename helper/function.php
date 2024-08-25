@@ -91,3 +91,10 @@ function dd($data)
     echo "</pre>";
     exit();
 }
+
+function getUserDetails($conn,$userId){
+    $userSql = "SELECT * FROM users where id=?";
+    $userQuery = $conn->prepare($userSql);
+    $userQuery->execute([$userId]);
+    return $userQuery->fetch(PDO::FETCH_ASSOC);
+}

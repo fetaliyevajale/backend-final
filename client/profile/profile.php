@@ -10,8 +10,13 @@ session_start();
 include('../../config/config.php'); 
 include('../../helper/function.php'); 
 
-$user = $_SESSION['user']; 
-
+if(!isset($_SESSION['user_id'])){
+    header('location: http://localhost/xampp/backend-project/auth/login.php');
+}
+else{
+    $userId = $_SESSION['user_id'];
+    $user = getUserDetails($connection,$userId);
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];

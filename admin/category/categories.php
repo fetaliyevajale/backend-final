@@ -72,7 +72,6 @@
                     <td>
                         <form method='post' action='manage_categories.php' style='display:inline;'>
                             <input type='hidden' name='id' value='{$category['id']}'>
-                            <input type='text' name='name' value='{$category['name']}' required>
                             <button type='submit' name='update' class='button'>Update</button>
                         </form>
                         <form method='post' action='manage_categories.php' style='display:inline;'>

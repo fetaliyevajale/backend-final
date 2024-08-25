@@ -4,7 +4,7 @@ include('../../helper/function.php');
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
-    header('Location: http://localhost/xampp/backend_project/admin/auth/login.php');
+    header('Location: http://localhost/xampp/backend-project/admin/auth/login.php');
     exit();
 }
 
